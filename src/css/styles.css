@@ -47,7 +47,8 @@ color: #808080;
 button {
   border-radius: 8px;
   padding: 8px 16px;
-  min-width: 75px;  
+  min-width: 75px;
+  
   background-color: #4e75ff;
 
   font-family: "Montserrat", sans-serif;
@@ -57,6 +58,7 @@ button {
   letter-spacing: 0.04em;
   color: #fff;
   border: none;
+
 }
 
 button:hover {
@@ -152,5 +154,9 @@ button:hover {
 .hidden {
   display: none;
 }
-
-
+/*
+.load-more {
+  min-width: 125px;
+  margin: 0 auto;
+}
+*/
