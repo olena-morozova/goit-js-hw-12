@@ -1,0 +1,156 @@
+/**
+  |============================
+  | include css partials with
+  | default @import url()
+  |============================
+*/
+/* Common styles */
+@import url('./reset.css');
+@import url('./base.css');
+
+
+body {
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+}
+
+.form {
+  margin: 32px auto;
+}
+
+input {
+font-family: "Montserrat",
+sans-serif;
+font-weight: 400;
+font-size: 16px;
+line-height: 1.5;
+letter-spacing: 0.04em;
+color: #2e2f42;
+
+padding: 8px 16px;
+border: 1px solid #808080;
+border-radius: 4px;
+width: 272px;
+margin-right: 8px;
+}
+input:hover {
+  border: 1px solid #000;
+}
+ input:focus {
+  border: 1px solid #4e75ff;
+  outline: none;
+}
+input::placeholder {
+color: #808080;
+}
+
+button {
+  border-radius: 8px;
+  padding: 8px 16px;
+  min-width: 75px;  
+  background-color: #4e75ff;
+
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #fff;
+  border: none;
+}
+
+button:hover {
+  background-color:#6c8cff;
+}
+
+.gallery {
+  margin-left: 156px;
+  margin-right: 156px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+    
+}
+
+.gallery-item {
+  border: 1px solid #808080;
+  max-width: 320px;
+  
+}
+
+.gallery-image {
+  width: 100%;
+  height: 152px;
+  margin-bottom: 4px;
+  object-fit: cover;
+}
+
+
+
+.content-list {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 4px;
+}
+
+
+
+
+
+
+
+
+
+.loader,
+.loader:before,
+.loader:after {
+  border-radius: 50%;
+  width: 2.5em;
+  height: 2.5em;
+  animation-fill-mode: both;
+  animation: bblFadInOut 1.8s infinite ease-in-out;
+}
+
+.loader {
+  color: #FFF;
+  font-size: 7px;
+  position: relative;
+  text-indent: -9999em;
+  transform: translateZ(0);
+  animation-delay: -0.16s;
+}
+
+.loader:before,
+.loader:after {
+  content: '';
+  position: absolute;
+  top: 0;
+}
+
+.loader:before {
+  left: -3.5em;
+  animation-delay: -0.32s;
+}
+
+.loader:after {
+  left: 3.5em;
+}
+
+@keyframes bblFadInOut {
+
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 2.5em 0 -1.3em
+  }
+
+  40% {
+    box-shadow: 0 2.5em 0 0
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+
