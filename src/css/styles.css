@@ -66,8 +66,10 @@ button:hover {
 }
 
 .gallery {
-  margin-left: 156px;
+ margin-left: 156px;
   margin-right: 156px;
+  margin-bottom: 32px;
+
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
@@ -87,15 +89,17 @@ button:hover {
   object-fit: cover;
 }
 
-
-
 .content-list {
   display: flex;
   justify-content: space-evenly;
   margin-bottom: 4px;
 }
 
-
+.load-more {
+  min-width: 125px;
+  margin: 0 auto;
+  margin-bottom: 44px;
+}
 
 
 
@@ -154,9 +158,4 @@ button:hover {
 .hidden {
   display: none;
 }
-/*
-.load-more {
-  min-width: 125px;
-  margin: 0 auto;
-}
-*/
+

@@ -25,6 +25,7 @@ async function onSearchSubmit(event) {
     
     page = 1;
     clearGallery();
+         
     loader.classList.remove("hidden");
     loadMoreBtn.classList.add("hidden");
 
@@ -54,15 +55,19 @@ async function onSearchSubmit(event) {
 async function onLoadMoreClick() {
     page += 1;
     loadMoreBtn.classList.add("hidden");
+         
     loader.classList.remove("hidden");
     try {          
         const data = await fetchImages(query, page, limit);
         renderImages(data.hits);
+
+        scrollPage();
+
         if (limit * page < totalHits) {
             loadMoreBtn.classList.remove("hidden");
         } else {
-            //return
-            iziToast.error({
+           
+            iziToast.info({
       position: "topRight",
       message: "We're sorry, but you've reached the end of search results."
     });
@@ -75,3 +80,13 @@ async function onLoadMoreClick() {
 
 }
 
+function scrollPage() {
+  const card = document.querySelector(".gallery-item");
+  if (card) {
+    const cardHeight = card.getBoundingClientRect().height;
+    window.scrollBy({
+      top: cardHeight * 2,
+      behavior: "smooth"
+    });
+  }
+}

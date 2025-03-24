@@ -26,7 +26,7 @@ export function renderImages(hits) {
         })  
         .join("");  
 
-    gallery.innerHTML = "";  
+    //gallery.innerHTML = "";  
     gallery.insertAdjacentHTML("beforeend", markup);  
     lightbox.refresh();   
 }
