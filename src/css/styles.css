@@ -118,7 +118,9 @@ button:hover {
 }
 
 .loader {
-  color: #FFF;
+  display: block;
+  margin: 20px auto;
+  color: #1908fc;
   font-size: 7px;
   position: relative;
   text-indent: -9999em;
